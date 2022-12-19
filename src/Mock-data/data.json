@@ -1,0 +1,33 @@
+{
+  "user": [
+    {
+      "name": "Siva",
+      "location": "Bengaluru",
+      "likes": 64,
+      "description": "Kick start your career",
+      "PostImage": "./image/10ximg.jpg",
+      "date": "12/02/2022"
+      
+    },
+    {
+      "name": "Neeraj",
+      "location": "Pune",
+      "likes": 30,
+      "description": "Nature is my best friend",
+      "PostImage": "./image/nature.jpg",
+      "date": "15/05/2022"
+      
+    },
+    {
+      "name": "Rahul",
+      "location": "Hyderabad",
+      "likes": 30,
+      "description": "I love Car Driving",
+      "PostImage": "./image/car.jpg",
+      "date": "10/06/2022"
+      
+    }
+   
+
+  ]
+}
