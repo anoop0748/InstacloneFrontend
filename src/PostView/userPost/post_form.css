@@ -1,4 +1,13 @@
+#loder{
+    position: fixed;
+    width: 100%;
+    margin: -46px 0px;
+    height: 625px;
+    background: rgba(133, 131, 131, 0.671) url('/public/image/Spinner.gif')
+    no-repeat center;
+    z-index: 1;
 
+}
 #user_post_form{
     margin: 5% auto;
     height: 80%;
@@ -12,6 +21,7 @@
     border:1px solid gray;
     box-shadow: 1px 1px 11px 5px rgb(5 5 5 / 22%);
 }
+
 form{
     width: 100%;
     display: flex;

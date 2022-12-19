@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useRef, } from "react";
 import './post_form.css'
+
 import axios from 'axios'
 
 
@@ -10,6 +11,7 @@ const Post_form = () => {
     let navigate = useNavigate();
     const form_data = useRef();
     const [img, setimg] = useState("")
+    const [loder , setloder ] = useState(false)
     function get_data(e) {
         e.preventDefault()
         let data = {
@@ -23,6 +25,7 @@ const Post_form = () => {
         postData("https://instabackend-jmp4.onrender.com/user/api/v1/posts", data)
     }
     async function postData(url, data) {
+        setloder(true)
         let formData = new FormData();
         formData.append("name", data.name);
         formData.append("location", data.location);
@@ -32,12 +35,14 @@ const Post_form = () => {
         formData.append("date", data.date);
         let response = await axios.post(url, formData);
         if (response.status === 200) {
+            setloder(false)
             navigate('/postview')
         }
     }
     const [user_img, setUser_img] = useState("No File Chosen");
     return (
         <>
+            {loder?<div id="loder"></div>:""}
             <div id='user_post_form'>
                 <form ref={form_data} encType='multipart/form-data' >
                     <div className="input-group">
