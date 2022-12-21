@@ -60,7 +60,7 @@ export default function Postview() {
                 </div>
 
                 <div className="date_Container">
-                  <p>{elem.date}</p>
+                  <p>{new Date(elem.date).toLocaleDateString()}</p>
                 </div>
 
                 <div className="likes_Counter">
