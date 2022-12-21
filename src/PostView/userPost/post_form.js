@@ -19,8 +19,8 @@ const Post_form = () => {
             "location": form_data.current.location.value,
             "likes": 1,
             "description": form_data.current.description.value,
-            "PostImage": img,
-            "date": new Date().toLocaleDateString()
+            "PostImage": img
+            
         }
         postData("https://instabackend-jmp4.onrender.com/user/api/v1/posts", data)
     }
@@ -32,7 +32,7 @@ const Post_form = () => {
         formData.append("likes", data.likes);
         formData.append("description", data.description);
         formData.append("PostImage", data.PostImage);
-        formData.append("date", data.date);
+        
         let response = await axios.post(url, formData);
         if (response.status === 200) {
             setloder(false)
